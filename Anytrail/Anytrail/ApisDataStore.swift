@@ -23,9 +23,9 @@ class ApisDataStore {
                          "client_secret": Keys.fourSquareClientSecret,
                          "v": FoursquareConstants.v,
                          "ll": "\(queryLocation.coordinate.latitude), \(queryLocation.coordinate.longitude)",
-                         "query": FoursquareConstants.query,
-                         "venuePhotos": "1",
-                         "radius": "\(LocationDataStore.sharedInstance.pointOfInterestDistancePadding() ?? 0)"]
+                         "section": "topPicks",
+                         "limit": "5",
+                         "venuePhotos": "1"]
         
         return parameter
     }
@@ -56,7 +56,7 @@ class ApisDataStore {
         let group = dispatch_group_create()
         for pointOfInterest in pointOfInterestEpicenters {
             dispatch_group_enter(group)
-            getDataWithCompletion(CLLocation(latitude: pointOfInterest.latitude, longitude:  pointOfInterest.longitude)) {_ in dispatch_group_leave(group)}
+            getDataWithCompletion(pointOfInterest) {_ in dispatch_group_leave(group)}
         }
         dispatch_group_notify(group, dispatch_get_main_queue()) {
             completion(true)

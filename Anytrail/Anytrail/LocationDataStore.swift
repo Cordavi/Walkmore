@@ -19,7 +19,8 @@ class LocationDataStore {
     var destinationString: String?
     var longLatArray: [Double]?
     var destinationsPoints = [CLLocationCoordinate2D]()
-    
+    let halfMileRadius = 1605.0
+    var routeDistance = 0.0
 }
 
 extension LocationDataStore {
@@ -50,12 +51,12 @@ extension LocationDataStore {
         
         let leftCoordinatesDistancePair = (sphereLeftCoordinates, findDistance(sphereLeftCoordinates, destination: destination))
         
-        let distances = [topCoordinatesDistancePair, bottomCoordinatesDistancePair, rightCoordinatesDistancePair, leftCoordinatesDistancePair]
+        let distances = [bottomCoordinatesDistancePair, rightCoordinatesDistancePair, leftCoordinatesDistancePair]
         
         var shortestDistanceCoordinatePair = topCoordinatesDistancePair
         
         for distanceCoordinatePair in distances {
-            if shortestDistanceCoordinatePair.1 < distanceCoordinatePair.1 {
+            if shortestDistanceCoordinatePair.1 > distanceCoordinatePair.1 {
              shortestDistanceCoordinatePair = distanceCoordinatePair
             }
         }
@@ -68,10 +69,9 @@ extension LocationDataStore {
             return nil
         }
         
-        let routeDistance = findDistance(origin, destination: destination)
-        let halfMileRadius = 804.5
-        let sphereNumberLimit = 50.0
-        var numberOfSpheres = routeDistance / halfMileRadius
+        routeDistance = findDistance(origin, destination: destination)
+        let sphereNumberLimit = 25.0
+        var numberOfSpheres = round(routeDistance / halfMileRadius) ?? 1
         var distanceBetweenSpheres = halfMileRadius
         
         if numberOfSpheres > sphereNumberLimit {
@@ -80,16 +80,16 @@ extension LocationDataStore {
         }
         
         var currentCoordinate = origin
-        var destinationsPoints = [CLLocation]()
+        var destinationsLocations = [CLLocation]()
         
         for _ in 1...Int(numberOfSpheres) {
             
             let epicenterToAdd = findEpicenterPoints(currentCoordinate, distanceBetweenSpheres: distanceBetweenSpheres, destination: destination)
-            destinationsPoints.append(epicenterToAdd)
+            destinationsLocations.append(epicenterToAdd)
             currentCoordinate = epicenterToAdd
             
         }
         
-        return destinationsPoints
+        return destinationsLocations
     }
 }
