@@ -19,7 +19,7 @@ class LocationDataStore {
     var destinationString: String?
     var longLatArray: [Double]?
     var destinationsPoints = [CLLocationCoordinate2D]()
-    let halfMileRadius = 1605.0
+    let halfMileRadius = 805.0
     var routeDistance = 0.0
 }
 
@@ -36,7 +36,16 @@ extension LocationDataStore {
         /////coordinates////
         let sphereTopCoordinates = CLLocation(latitude: (location.coordinate.latitude + (distanceBetweenSpheres / latitudeLongitudeOffset)), longitude: location.coordinate.longitude)
         
+        let sphereTopRightCoordinates = CLLocation(latitude: (location.coordinate.latitude + (distanceBetweenSpheres / latitudeLongitudeOffset)), longitude: location.coordinate.longitude + (distanceBetweenSpheres / latitudeLongitudeOffset))
+        
+        let sphereTopLeftCoordinates = CLLocation(latitude: (location.coordinate.latitude + (distanceBetweenSpheres / latitudeLongitudeOffset)), longitude: location.coordinate.longitude - (distanceBetweenSpheres / latitudeLongitudeOffset))
+        
+        
         let sphereBottomCoordinates = CLLocation(latitude: (location.coordinate.latitude - (distanceBetweenSpheres / latitudeLongitudeOffset)), longitude: location.coordinate.longitude)
+        
+        let sphereBottomRightCoordinates = CLLocation(latitude: (location.coordinate.latitude - (distanceBetweenSpheres / latitudeLongitudeOffset)), longitude: location.coordinate.longitude + (distanceBetweenSpheres / latitudeLongitudeOffset))
+        
+        let sphereBottomLeftCoordinates = CLLocation(latitude: (location.coordinate.latitude - (distanceBetweenSpheres / latitudeLongitudeOffset)), longitude: location.coordinate.longitude - (distanceBetweenSpheres / latitudeLongitudeOffset))
         
         let sphereRightCoordinates = CLLocation(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude + (distanceBetweenSpheres / latitudeLongitudeOffset))
         
@@ -45,19 +54,27 @@ extension LocationDataStore {
         ////coordinate distant pairs
         let topCoordinatesDistancePair = (sphereTopCoordinates, findDistance(sphereTopCoordinates, destination: destination))
         
+        let topRightCoordinatesDistancePair = (sphereTopRightCoordinates, findDistance(sphereTopRightCoordinates, destination: destination))
+        
+        let topLeftCoordinatesDistancePair = (sphereTopLeftCoordinates, findDistance(sphereTopLeftCoordinates, destination: destination))
+        
         let bottomCoordinatesDistancePair = (sphereBottomCoordinates, findDistance(sphereBottomCoordinates, destination: destination))
+        
+        let bottomRightCoordinatesDistancePair = (sphereBottomRightCoordinates, findDistance(sphereBottomRightCoordinates, destination: destination))
+        
+        let bottomLeftCoordinatesDistancePair = (sphereBottomLeftCoordinates, findDistance(sphereBottomLeftCoordinates, destination: destination))
         
         let rightCoordinatesDistancePair = (sphereRightCoordinates, findDistance(sphereRightCoordinates, destination: destination))
         
         let leftCoordinatesDistancePair = (sphereLeftCoordinates, findDistance(sphereLeftCoordinates, destination: destination))
         
-        let distances = [bottomCoordinatesDistancePair, rightCoordinatesDistancePair, leftCoordinatesDistancePair]
+        let distances = [topRightCoordinatesDistancePair, topLeftCoordinatesDistancePair,bottomRightCoordinatesDistancePair, bottomLeftCoordinatesDistancePair, bottomCoordinatesDistancePair, rightCoordinatesDistancePair, leftCoordinatesDistancePair]
         
         var shortestDistanceCoordinatePair = topCoordinatesDistancePair
         
         for distanceCoordinatePair in distances {
             if shortestDistanceCoordinatePair.1 > distanceCoordinatePair.1 {
-             shortestDistanceCoordinatePair = distanceCoordinatePair
+                shortestDistanceCoordinatePair = distanceCoordinatePair
             }
         }
         
