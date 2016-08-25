@@ -22,9 +22,9 @@ class ApisDataStore {
         let parameter = ["client_id": Keys.fourSquareClientID,
                          "client_secret": Keys.fourSquareClientSecret,
                          "v": FoursquareConstants.v,
-                         "intent": "browse",
                          "ll": "\(queryLocation.coordinate.latitude), \(queryLocation.coordinate.longitude)",
                          "query": FoursquareConstants.query,
+                         "venuePhotos": "1",
                          "radius": "\(LocationDataStore.sharedInstance.pointOfInterestDistancePadding() ?? 0)"]
         
         return parameter
