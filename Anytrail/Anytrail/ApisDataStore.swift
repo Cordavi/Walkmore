@@ -23,8 +23,8 @@ class ApisDataStore {
                          "client_secret": Keys.fourSquareClientSecret,
                          "v": FoursquareConstants.v,
                          "ll": "\(queryLocation.coordinate.latitude), \(queryLocation.coordinate.longitude)",
-                         "section": "topPicks",
-                         "limit": "5",
+                         "section": "sights outdoors topPicks Monument Landmark Historic landmarks",
+                         "limit": "10",
                          "venuePhotos": "1"]
         
         return parameter
