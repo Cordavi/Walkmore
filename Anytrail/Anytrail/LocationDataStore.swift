@@ -18,6 +18,7 @@ class LocationDataStore {
     var originString: String?
     var destinationString: String?
     var longLatArray: [Double]?
+    var destinationsPoints = [CLLocationCoordinate2D]()
     
 }
 
@@ -27,33 +28,67 @@ extension LocationDataStore {
         return origin.distanceFromLocation(destination)
     }
     
-    func pointOfInterestDistancePadding() -> Double? {
-        guard let destination = destination, origin = origin else {
-            return nil
+    func findEpicenterPoints(location: CLLocation, distanceBetweenSpheres: Double, destination: CLLocation) -> CLLocation {
+        let latitudeLongitudeOffset = 111111.0
+        
+        
+        /////coordinates////
+        let sphereTopCoordinates = CLLocation(latitude: (location.coordinate.latitude + (distanceBetweenSpheres / latitudeLongitudeOffset)), longitude: location.coordinate.longitude)
+        
+        let sphereBottomCoordinates = CLLocation(latitude: (location.coordinate.latitude - (distanceBetweenSpheres / latitudeLongitudeOffset)), longitude: location.coordinate.longitude)
+        
+        let sphereRightCoordinates = CLLocation(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude + (distanceBetweenSpheres / latitudeLongitudeOffset))
+        
+        let sphereLeftCoordinates = CLLocation(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude - (distanceBetweenSpheres / latitudeLongitudeOffset))
+        
+        ////coordinate distant pairs
+        let topCoordinatesDistancePair = (sphereTopCoordinates, findDistance(sphereTopCoordinates, destination: destination))
+        
+        let bottomCoordinatesDistancePair = (sphereBottomCoordinates, findDistance(sphereBottomCoordinates, destination: destination))
+        
+        let rightCoordinatesDistancePair = (sphereRightCoordinates, findDistance(sphereRightCoordinates, destination: destination))
+        
+        let leftCoordinatesDistancePair = (sphereLeftCoordinates, findDistance(sphereLeftCoordinates, destination: destination))
+        
+        let distances = [topCoordinatesDistancePair, bottomCoordinatesDistancePair, rightCoordinatesDistancePair, leftCoordinatesDistancePair]
+        
+        var shortestDistanceCoordinatePair = topCoordinatesDistancePair
+        
+        for distanceCoordinatePair in distances {
+            if shortestDistanceCoordinatePair.1 < distanceCoordinatePair.1 {
+             shortestDistanceCoordinatePair = distanceCoordinatePair
+            }
         }
-        return findDistance(origin, destination: destination) / 2
+        
+        return shortestDistanceCoordinatePair.0
     }
     
-    func midpointCoordinates(fromLocation: CLLocation, toLocation: CLLocation) -> CLLocationCoordinate2D {
-        guard (fromLocation.coordinate.latitude, fromLocation.coordinate.longitude) != (toLocation.coordinate.latitude, toLocation.coordinate.latitude) else {
-            return fromLocation.coordinate
-        }
-        return CLLocationCoordinate2D(latitude: (fromLocation.coordinate.latitude + toLocation.coordinate.latitude) / 2, longitude: (fromLocation.coordinate.longitude + toLocation.coordinate.longitude) / 2)
-    }
-    
-    func returningLongLatArray() -> [CLLocationCoordinate2D]? {
+    func returningLongLatArray() -> [CLLocation]? {
         guard let destination = destination, origin = origin else {
             return nil
         }
         
-        var destinationsPoints = [CLLocationCoordinate2D]()
-        let midpoint = midpointCoordinates(origin, toLocation: destination)
-        let startQuaterpoint = midpointCoordinates(origin, toLocation: CLLocation(latitude: midpoint.latitude, longitude: midpoint.longitude))
-        let endQuaterpoint = midpointCoordinates(CLLocation(latitude: midpoint.latitude, longitude: midpoint.longitude), toLocation: destination)
+        let routeDistance = findDistance(origin, destination: destination)
+        let halfMileRadius = 804.5
+        let sphereNumberLimit = 50.0
+        var numberOfSpheres = routeDistance / halfMileRadius
+        var distanceBetweenSpheres = halfMileRadius
         
-        destinationsPoints.append(midpoint)
-        destinationsPoints.append(startQuaterpoint)
-        destinationsPoints.append(endQuaterpoint)
+        if numberOfSpheres > sphereNumberLimit {
+            numberOfSpheres = sphereNumberLimit
+            distanceBetweenSpheres = routeDistance / sphereNumberLimit
+        }
+        
+        var currentCoordinate = origin
+        var destinationsPoints = [CLLocation]()
+        
+        for _ in 1...Int(numberOfSpheres) {
+            
+            let epicenterToAdd = findEpicenterPoints(currentCoordinate, distanceBetweenSpheres: distanceBetweenSpheres, destination: destination)
+            destinationsPoints.append(epicenterToAdd)
+            currentCoordinate = epicenterToAdd
+            
+        }
         
         return destinationsPoints
     }
