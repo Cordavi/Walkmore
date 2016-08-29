@@ -125,12 +125,12 @@
 		8A4827961D677B0700C53A71 /* InternetStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternetStatus.swift; sourceTree = "<group>"; };
 		8A66242E1D5A8DCB009760DA /* HealthKitDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthKitDataStore.swift; sourceTree = "<group>"; };
 		8AC2741E1D6505F800F4D4E1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		9424A76C1D53D5DA00CE8D42 /* Anytrail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Anytrail.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9424A76C1D53D5DA00CE8D42 /* Walkmore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Walkmore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9424A76F1D53D5DA00CE8D42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9424A7761D53D5DA00CE8D42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9424A7781D53D5DA00CE8D42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9424A77B1D53D5DA00CE8D42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		9424A7821D53D5DA00CE8D42 /* AnytrailTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnytrailTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9424A7821D53D5DA00CE8D42 /* Walkmore.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Walkmore.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9424A7881D53D5DA00CE8D42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9437CADE1D663C660060E9CF /* AnytrailKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnytrailKit.swift; sourceTree = "<group>"; };
 		9437CAE61D6755130060E9CF /* JSSAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSSAlertView.swift; sourceTree = "<group>"; };
@@ -211,8 +211,8 @@
 		9424A76D1D53D5DA00CE8D42 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9424A76C1D53D5DA00CE8D42 /* Anytrail.app */,
-				9424A7821D53D5DA00CE8D42 /* AnytrailTests.xctest */,
+				9424A76C1D53D5DA00CE8D42 /* Walkmore.app */,
+				9424A7821D53D5DA00CE8D42 /* Walkmore.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -359,9 +359,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9424A76B1D53D5DA00CE8D42 /* Anytrail */ = {
+		9424A76B1D53D5DA00CE8D42 /* Walkmore */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9424A78B1D53D5DA00CE8D42 /* Build configuration list for PBXNativeTarget "Anytrail" */;
+			buildConfigurationList = 9424A78B1D53D5DA00CE8D42 /* Build configuration list for PBXNativeTarget "Walkmore" */;
 			buildPhases = (
 				A725E52D38DF161F7C7256A7 /* [CP] Check Pods Manifest.lock */,
 				9424A7681D53D5DA00CE8D42 /* Sources */,
@@ -374,14 +374,14 @@
 			);
 			dependencies = (
 			);
-			name = Anytrail;
+			name = Walkmore;
 			productName = Anytrail;
-			productReference = 9424A76C1D53D5DA00CE8D42 /* Anytrail.app */;
+			productReference = 9424A76C1D53D5DA00CE8D42 /* Walkmore.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9424A7811D53D5DA00CE8D42 /* AnytrailTests */ = {
+		9424A7811D53D5DA00CE8D42 /* WalkmoreTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9424A78E1D53D5DA00CE8D42 /* Build configuration list for PBXNativeTarget "AnytrailTests" */;
+			buildConfigurationList = 9424A78E1D53D5DA00CE8D42 /* Build configuration list for PBXNativeTarget "WalkmoreTests" */;
 			buildPhases = (
 				519782D0E52AB9478379D543 /* [CP] Check Pods Manifest.lock */,
 				9424A77E1D53D5DA00CE8D42 /* Sources */,
@@ -395,9 +395,9 @@
 			dependencies = (
 				9424A7841D53D5DA00CE8D42 /* PBXTargetDependency */,
 			);
-			name = AnytrailTests;
+			name = WalkmoreTests;
 			productName = AnytrailTests;
-			productReference = 9424A7821D53D5DA00CE8D42 /* AnytrailTests.xctest */;
+			productReference = 9424A7821D53D5DA00CE8D42 /* Walkmore.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -434,7 +434,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9424A7671D53D5DA00CE8D42 /* Build configuration list for PBXProject "Anytrail" */;
+			buildConfigurationList = 9424A7671D53D5DA00CE8D42 /* Build configuration list for PBXProject "Walkmore" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -447,8 +447,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9424A76B1D53D5DA00CE8D42 /* Anytrail */,
-				9424A7811D53D5DA00CE8D42 /* AnytrailTests */,
+				9424A76B1D53D5DA00CE8D42 /* Walkmore */,
+				9424A7811D53D5DA00CE8D42 /* WalkmoreTests */,
 			);
 		};
 /* End PBXProject section */
@@ -643,7 +643,7 @@
 /* Begin PBXTargetDependency section */
 		9424A7841D53D5DA00CE8D42 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9424A76B1D53D5DA00CE8D42 /* Anytrail */;
+			target = 9424A76B1D53D5DA00CE8D42 /* Walkmore */;
 			targetProxy = 9424A7831D53D5DA00CE8D42 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -766,7 +766,7 @@
 				INFOPLIST_FILE = Anytrail/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.flatironschool.team-whale";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Walkmore;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
@@ -782,7 +782,7 @@
 				INFOPLIST_FILE = Anytrail/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.flatironschool.team-whale";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Walkmore;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
@@ -797,11 +797,11 @@
 				INFOPLIST_FILE = AnytrailTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.flatironschool.AnytrailTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Walkmore;
 				PROVISIONING_PROFILE = "ccba23f8-b13a-41f1-8530-ee2b4c861616";
 				SWIFT_OBJC_BRIDGING_HEADER = "AnytrailTests/AnytrailTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Anytrail.app/Anytrail";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Walkmore.app/Walkmore";
 			};
 			name = Debug;
 		};
@@ -816,17 +816,17 @@
 				INFOPLIST_FILE = AnytrailTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.flatironschool.AnytrailTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Walkmore;
 				PROVISIONING_PROFILE = "ccba23f8-b13a-41f1-8530-ee2b4c861616";
 				SWIFT_OBJC_BRIDGING_HEADER = "AnytrailTests/AnytrailTests-Bridging-Header.h";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Anytrail.app/Anytrail";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Walkmore.app/Walkmore";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9424A7671D53D5DA00CE8D42 /* Build configuration list for PBXProject "Anytrail" */ = {
+		9424A7671D53D5DA00CE8D42 /* Build configuration list for PBXProject "Walkmore" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9424A7891D53D5DA00CE8D42 /* Debug */,
@@ -835,7 +835,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9424A78B1D53D5DA00CE8D42 /* Build configuration list for PBXNativeTarget "Anytrail" */ = {
+		9424A78B1D53D5DA00CE8D42 /* Build configuration list for PBXNativeTarget "Walkmore" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9424A78C1D53D5DA00CE8D42 /* Debug */,
@@ -844,7 +844,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9424A78E1D53D5DA00CE8D42 /* Build configuration list for PBXNativeTarget "AnytrailTests" */ = {
+		9424A78E1D53D5DA00CE8D42 /* Build configuration list for PBXNativeTarget "WalkmoreTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9424A78F1D53D5DA00CE8D42 /* Debug */,

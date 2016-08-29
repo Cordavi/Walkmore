@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Anytrail.xcodeproj">
+      location = "group:/Users/Cordavi/Developer/Swift/Walkmore/Anytrail/Walkmore.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
