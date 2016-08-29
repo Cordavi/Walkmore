@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E135AB71D73C24A003D230A /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E135AB61D73C24A003D230A /* Keys.swift */; };
 		2E1C75751D6362DF00D412FB /* HealthKitUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1C75741D6362DF00D412FB /* HealthKitUserData.swift */; };
 		2E1DA87D1D5E057500F83DFD /* WalkTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1DA87B1D5E057500F83DFD /* WalkTracker.swift */; };
 		2E1DA87F1D5E0DEB00F83DFD /* ActivityTracker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E1DA87E1D5E0DEB00F83DFD /* ActivityTracker.storyboard */; };
@@ -16,7 +17,6 @@
 		2E8AC7851D67C3E80012AE98 /* Paths.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2E8AC7831D67C3E80012AE98 /* Paths.xcdatamodeld */; };
 		2EBCDDFD1D6BA4E900E8B6BC /* DirectionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBCDDFB1D6BA4E900E8B6BC /* DirectionsView.swift */; };
 		2EBCDDFE1D6BA4E900E8B6BC /* DirectionsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EBCDDFC1D6BA4E900E8B6BC /* DirectionsView.xib */; };
-		2EC3F1221D6E055800CD33E6 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC3F1211D6E055800CD33E6 /* Keys.swift */; };
 		4D225C1B1D5A0FF600360AB8 /* MashapeAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D225C1A1D5A0FF600360AB8 /* MashapeAPIClient.swift */; };
 		4D225C1F1D5A100800360AB8 /* MashapeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D225C1E1D5A100800360AB8 /* MashapeData.swift */; };
 		4D5244721D66084F0066C01B /* TipsAndTricksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5244711D66084F0066C01B /* TipsAndTricksTableViewCell.swift */; };
@@ -83,6 +83,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E135AB61D73C24A003D230A /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		2E1C75741D6362DF00D412FB /* HealthKitUserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthKitUserData.swift; sourceTree = "<group>"; };
 		2E1DA87B1D5E057500F83DFD /* WalkTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkTracker.swift; sourceTree = "<group>"; };
 		2E1DA87E1D5E0DEB00F83DFD /* ActivityTracker.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ActivityTracker.storyboard; sourceTree = "<group>"; };
@@ -91,7 +92,6 @@
 		2E8AC7841D67C3E80012AE98 /* Paths.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Paths.xcdatamodel; sourceTree = "<group>"; };
 		2EBCDDFB1D6BA4E900E8B6BC /* DirectionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionsView.swift; sourceTree = "<group>"; };
 		2EBCDDFC1D6BA4E900E8B6BC /* DirectionsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DirectionsView.xib; sourceTree = "<group>"; };
-		2EC3F1211D6E055800CD33E6 /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		2EDDFE291D5A868900B36853 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3417C12B1559CD326FE9F852 /* Pods-Anytrail.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Anytrail.release.xcconfig"; path = "Pods/Target Support Files/Pods-Anytrail/Pods-Anytrail.release.xcconfig"; sourceTree = "<group>"; };
 		4D225C1A1D5A0FF600360AB8 /* MashapeAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MashapeAPIClient.swift; sourceTree = "<group>"; };
@@ -220,7 +220,7 @@
 		9424A76E1D53D5DA00CE8D42 /* Anytrail */ = {
 			isa = PBXGroup;
 			children = (
-				2EC3F1211D6E055800CD33E6 /* Keys.swift */,
+				2E135AB61D73C24A003D230A /* Keys.swift */,
 				2E8AC7831D67C3E80012AE98 /* Paths.xcdatamodeld */,
 				4DF1FD171D64E3F800692309 /* Anytrail.entitlements */,
 				9424A76F1D53D5DA00CE8D42 /* AppDelegate.swift */,
@@ -609,7 +609,6 @@
 				949370351D62515900C696AE /* ATConstants.swift in Sources */,
 				4D225C1B1D5A0FF600360AB8 /* MashapeAPIClient.swift in Sources */,
 				8A3948F91D621C23004A4B94 /* ATPathViewController.swift in Sources */,
-				2EC3F1221D6E055800CD33E6 /* Keys.swift in Sources */,
 				4DF1FD1F1D6508C500692309 /* TipsAndTricksViewController.swift in Sources */,
 				947B6AB51D6B6F01009D5268 /* Coordinate.swift in Sources */,
 				4DFDBC151D634806006616D0 /* ProfileMapHeader.swift in Sources */,
@@ -621,6 +620,7 @@
 				4DB2D9651D58DF18007BD4A5 /* FoursquareData.swift in Sources */,
 				947B6AB31D6B6F01009D5268 /* FullPath.swift in Sources */,
 				8A6624311D5A8DCB009760DA /* HealthKitDataStore.swift in Sources */,
+				2E135AB71D73C24A003D230A /* Keys.swift in Sources */,
 				2E1DA8831D5E3B5B00F83DFD /* WalkTrackerViewController.swift in Sources */,
 				4DB2D9611D58DEBA007BD4A5 /* FoursquareAPIClient.swift in Sources */,
 				8A3948FB1D623743004A4B94 /* ATPathCell.swift in Sources */,
