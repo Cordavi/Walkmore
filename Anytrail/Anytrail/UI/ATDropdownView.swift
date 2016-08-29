@@ -54,7 +54,7 @@ class ATDropdownView: UIView, UITextFieldDelegate {
     init(view: UIView) {
         self.view = view
         
-        super.init(frame: CGRectMake(view.frame.origin.x, view.frame.origin.y - 75, view.frame.size.width, 100))
+        super.init(frame: CGRectMake(view.frame.origin.x, view.frame.origin.y, view.frame.size.width, 100))
         configureDefaultView()
     }
     
@@ -275,14 +275,14 @@ class ATDropdownView: UIView, UITextFieldDelegate {
         originTextField.snp.makeConstraints { (make) in
             make.left.equalTo(self.snp.left).offset(30)
             make.right.equalTo(self.snp.right).offset(-5)
-            make.top.equalTo(self.snp.top).offset(15)
+            make.top.equalTo(self.snp.top).offset(24)
             make.height.equalTo(30)
         }
         
         destinationTextField.snp.makeConstraints { (make) in
             make.left.equalTo(self.snp.left).offset(30)
             make.right.equalTo(self.snp.right).offset(-5)
-            make.bottom.equalTo(self.snp.bottom).offset(-5)
+            make.bottom.equalTo(self.snp.bottom).offset(-9)
             make.height.equalTo(30)
         }
         

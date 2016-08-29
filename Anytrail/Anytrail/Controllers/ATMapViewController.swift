@@ -21,7 +21,6 @@ class ATMapViewController: UIViewController, MGLMapViewDelegate, ATDropdownViewD
     @IBOutlet var mapView: MGLMapView!
     
     let kit = AnytrailKit.sharedInstance
-    
     var geocoder = Geocoder(accessToken: Keys.mapBoxToken)
     
     var origin: ATAnnotation?
@@ -452,16 +451,10 @@ class ATMapViewController: UIViewController, MGLMapViewDelegate, ATDropdownViewD
         if !InternetStatus.shared.hasInternet {
             ATAlertView.alertNetworkLoss(self, callback: {})
         }
-        
         geocoder = Geocoder(accessToken: Keys.mapBoxToken)
-        
         dropdownView = ATDropdownView(view: self.view)
         dropdownView.delegate = self
-        
-        delay(0.3) {
-            self.dropdownView.show()
-            self.dropdownDisplayed = true
-        }
+        view.addSubview(dropdownView)
         
         currentStage = .Default
         self.loadingSpinner.color = UIColor.darkGrayColor()
