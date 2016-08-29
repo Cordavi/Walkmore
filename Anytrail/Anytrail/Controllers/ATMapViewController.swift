@@ -197,10 +197,9 @@ class ATMapViewController: UIViewController, MGLMapViewDelegate, ATDropdownViewD
     
     func setToWaypoints() {
         createMode = true
+        drawRouteButton.enabled = true
         currentStage = .Waypoints
         dropdownView.hide()
-        
-        disableControlsForBuffer(true)
         getWaypoints()
         
         UIView.animateWithDuration(0.3) {
@@ -209,12 +208,8 @@ class ATMapViewController: UIViewController, MGLMapViewDelegate, ATDropdownViewD
     }
     
     func getWaypoints() {
-        self.loadingSpinner.startAnimating()
         addFoursquareAnnotations() { count in
             dispatch_async(dispatch_get_main_queue()) {
-                self.loadingSpinner.stopAnimating()
-                self.disableControlsForBuffer(false)
-                
                 if self.pointsOfInterest.isEmpty {
                     ATAlertView.alertWithTitle(self, type: .Error, title: "Whoops", text: "There were no points of interest found. Please try a different set of addresses.") {
                         self.resetToDefaultStage()
@@ -252,13 +247,6 @@ class ATMapViewController: UIViewController, MGLMapViewDelegate, ATDropdownViewD
                 self.setToWaypoints()
             }
         }
-    }
-    
-    func disableControlsForBuffer(disable: Bool) {
-        dropdownBarButton.enabled = !disable
-        drawRouteButton.enabled = !disable
-        
-        dropdownView.userInteractionEnabled = !disable
     }
     
     func giveScrollerPages()->Int{
