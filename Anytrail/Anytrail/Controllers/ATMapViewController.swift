@@ -18,12 +18,7 @@ import UIKit
 class ATMapViewController: UIViewController, MGLMapViewDelegate, ATDropdownViewDelegate {
     
     @IBOutlet weak var loadingSpinner: UIActivityIndicatorView!
-    @IBOutlet weak var pageControl: UIPageControl!
-    @IBOutlet weak var carouselView: TGLParallaxCarousel!
     @IBOutlet var mapView: MGLMapView!
-    @IBOutlet weak var addButton: UIButton!
-    @IBOutlet weak var dropdownBarButton: UIBarButtonItem!
-    @IBOutlet weak var drawRouteButton: UIBarButtonItem!
     
     let kit = AnytrailKit.sharedInstance
     
@@ -82,7 +77,6 @@ class ATMapViewController: UIViewController, MGLMapViewDelegate, ATDropdownViewD
         WalkTracker.sharedInstance.startWalk()
         workOutTimer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(updateLabels(_:)), userInfo: nil, repeats: true)
         workOutTimer.fire()
-        dropdownBarButton.enabled = false
     }
     
     func dropdownDidEndRoute() {
@@ -92,7 +86,7 @@ class ATMapViewController: UIViewController, MGLMapViewDelegate, ATDropdownViewD
         workOutTimer.invalidate()
         workOutTimer = NSTimer()
         
-        dropdownBarButton.enabled = true
+
         
         WalkTracker.sharedInstance.stopWalk { saveResult in
             if saveResult {
@@ -133,65 +127,9 @@ class ATMapViewController: UIViewController, MGLMapViewDelegate, ATDropdownViewD
         }
     }
     
-    // MARK: - Actions
-    
-    @IBAction func dropdown() {
-        guard let currentStageOfDropdown = currentStage else {
-            return
-        }
-        
-        switch currentStageOfDropdown {
-        case .Default:
-            configureDropdownButtonForState(dropdownDisplayed)
-        case .Waypoints:
-            resetToDefaultStage()
-        case .Route:
-            currentStage = .Default
-            clearMapView()
-            configureDropdownButtonForState(dropdownDisplayed)
-            reshowDropdown(withView: .Default, hintText: "")
-            UIView.animateWithDuration(0.3) {
-                self.dropdownBarButton.image = UIImage(named: "dropdown")
-            }
-            drawRouteButton.enabled = false
-        }
-    }
-    
-    func configureDropdownButtonForState(isDisplaying: Bool) {
-        let buttonImage: UIImage?
-        if isDisplaying {
-            buttonImage = UIImage(named: "dropdown-up")
-            dropdownView.hide()
-        } else {
-            buttonImage = UIImage(named: "dropdown")
-            dropdownView.show()
-        }
-        dropdownBarButton.image = buttonImage
-        dropdownDisplayed = !isDisplaying
-    }
-    
-    @IBAction func create() {
-        guard let currentStage = currentStage else {
-            return
-        }
-        
-        switch currentStage {
-        case .Default:
-            setToWaypoints()
-        case .Waypoints:
-            setToRoute()
-        case .Route:
-            break
-        }
-    }
-    
     func resetToDefaultStage() {
         currentStage = .Default
         reshowDropdown(withView: .Default, hintText: "")
-        UIView.animateWithDuration(0.3) {
-            self.dropdownBarButton.image = UIImage(named: "dropdown")
-        }
-        drawRouteButton.enabled = false
         clearMapView()
     }
     
@@ -200,11 +138,9 @@ class ATMapViewController: UIViewController, MGLMapViewDelegate, ATDropdownViewD
         currentStage = .Waypoints
         dropdownView.hide()
         
-        disableControlsForBuffer(true)
         getWaypoints()
         
         UIView.animateWithDuration(0.3) {
-            self.dropdownBarButton.image = UIImage(named: "cancel")
         }
     }
     
@@ -212,8 +148,6 @@ class ATMapViewController: UIViewController, MGLMapViewDelegate, ATDropdownViewD
         self.loadingSpinner.startAnimating()
         addFoursquareAnnotations() { count in
             dispatch_async(dispatch_get_main_queue()) {
-                self.loadingSpinner.stopAnimating()
-                self.disableControlsForBuffer(false)
                 
                 if self.pointsOfInterest.isEmpty {
                     ATAlertView.alertWithTitle(self, type: .Error, title: "Whoops", text: "There were no points of interest found. Please try a different set of addresses.") {
@@ -238,7 +172,6 @@ class ATMapViewController: UIViewController, MGLMapViewDelegate, ATDropdownViewD
                 ATAlertView.alertWithTitle(self, type: .Success, title: "Path Saved", text: "Estimated Time:\n \(time).\nEnjoy your walk!") {
                     self.dropdownView.changeDropdownView(.Activity)
                     self.dropdownView.show()
-                    self.drawRouteButton.enabled = false
                 }
             }
         } else {
@@ -252,23 +185,6 @@ class ATMapViewController: UIViewController, MGLMapViewDelegate, ATDropdownViewD
                 self.setToWaypoints()
             }
         }
-    }
-    
-    func disableControlsForBuffer(disable: Bool) {
-        dropdownBarButton.enabled = !disable
-        drawRouteButton.enabled = !disable
-        
-        dropdownView.userInteractionEnabled = !disable
-    }
-    
-    func giveScrollerPages()->Int{
-        var count = 0
-        for leg in navigationLegs{
-            for _ in leg.steps{
-                count += 1
-            }
-        }
-        return count
     }
     
     func directionsArray(){
@@ -507,8 +423,6 @@ class ATMapViewController: UIViewController, MGLMapViewDelegate, ATDropdownViewD
             
             if let route = routes?.first {
                 self.navigationLegs = route.legs
-                self.carouselView.type = .Normal
-                self.carouselView.hidden = false
                 let travelTimeFormatter = NSDateComponentsFormatter()
                 travelTimeFormatter.unitsStyle = .Short
                 let formattedTravelTime = travelTimeFormatter.stringFromTimeInterval(route.expectedTravelTime)
@@ -550,14 +464,6 @@ class ATMapViewController: UIViewController, MGLMapViewDelegate, ATDropdownViewD
         }
         
         currentStage = .Default
-        drawRouteButton.enabled = false
-        carouselView.delegate = self
-        carouselView.datasource = self
-        carouselView.reloadInputViews()
-        carouselView.bounceMargin = 1.0
-        carouselView.itemMargin = 30.0
-        carouselView.hidden = true
-        pageControl.hidden = true
         self.loadingSpinner.color = UIColor.darkGrayColor()
         self.loadingSpinner.hidesWhenStopped = true
         
@@ -638,13 +544,11 @@ extension ATMapViewController {
         if let annotationsToRemove = mapView.annotations {
             mapView.removeAnnotations(annotationsToRemove)
         }
-        carouselView.hidden = true
         origin = nil
         destination = nil
         directionArray = []
         navigationLegs = []
         navigationRoutes = []
-        carouselView.carouselItems = []
         numberOfSteps = 0
         mapView.scrollEnabled = true
         removePath()
@@ -672,41 +576,5 @@ extension ATMapViewController {
     func delay(delay: NSTimeInterval, block: dispatch_block_t) {
         let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay * Double(NSEC_PER_SEC)))
         dispatch_after(time, dispatch_get_main_queue(), block)
-    }
-}
-
-extension ATMapViewController: TGLParallaxCarouselDatasource {
-    func numberOfItemsInCarousel(carousel: TGLParallaxCarousel) -> Int {
-        
-        return self.giveScrollerPages()
-    }
-    
-    func viewForItemAtIndex(index: Int, carousel: TGLParallaxCarousel) -> TGLParallaxCarouselItem {
-        directionsArray()
-        let instruction = directionArray[index].1.instructions
-        let directView = DirectionView(frame: CGRectMake(carousel.bounds.minX, carousel.bounds.minY, carousel.bounds.size.width, carousel.bounds.size.height * 0.35), leg: "\(directionArray[index].0)", step: "\(instruction)")
-        return directView
-    }
-    
-}
-
-extension ATMapViewController: TGLParallaxCarouselDelegate {
-    override func viewDidAppear(animated: Bool) {
-        self.pageControl.hidden = true
-    }
-    
-    func didTapOnItemAtIndex(index: Int, carousel: TGLParallaxCarousel) {
-        
-    }
-    
-    func didMovetoPageAtIndex(index: Int) {
-        
-        if let coordinatesInArray = directionArray[index].2{
-            
-            
-            if let first = coordinatesInArray.first{
-                mapView.setCenterCoordinate(first, zoomLevel: 15, animated: true)
-            }
-        }
     }
 }
