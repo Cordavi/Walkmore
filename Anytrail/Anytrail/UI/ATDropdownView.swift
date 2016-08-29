@@ -156,7 +156,7 @@ class ATDropdownView: UIView, UITextFieldDelegate {
     // MARK: - Configuration
     
     func configureDefaultView() {
-        self.backgroundColor = UIColor(red: 248/255, green: 248/255, blue: 248/255, alpha: 0.7)
+        self.backgroundColor = UIColor(red: 248/255, green: 248/255, blue: 248/255, alpha: 0.8)
         
         clearView()
         

@@ -85,7 +85,7 @@ class ATMapViewController: UIViewController, MGLMapViewDelegate, ATDropdownViewD
         workOutTimer.invalidate()
         workOutTimer = NSTimer()
         
-
+        
         
         WalkTracker.sharedInstance.stopWalk { saveResult in
             if saveResult {
@@ -158,6 +158,7 @@ class ATMapViewController: UIViewController, MGLMapViewDelegate, ATDropdownViewD
                     }
                     ATAlertView.alertWithTitle(self, type: .Success, title: "Great", text: "Please select some points of interest to add to your route.") { }
                 }
+                self.loadingSpinner.stopAnimating()
             }
         }
     }
@@ -457,8 +458,8 @@ class ATMapViewController: UIViewController, MGLMapViewDelegate, ATDropdownViewD
         view.addSubview(dropdownView)
         
         currentStage = .Default
-        self.loadingSpinner.color = UIColor.darkGrayColor()
-        self.loadingSpinner.hidesWhenStopped = true
+        loadingSpinner.color = UIColor.lightGrayColor()
+        loadingSpinner.hidesWhenStopped = true
         
     }
     
