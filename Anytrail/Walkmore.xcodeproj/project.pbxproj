@@ -7,13 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2E135AB71D73C24A003D230A /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E135AB61D73C24A003D230A /* Keys.swift */; };
 		2E1C75751D6362DF00D412FB /* HealthKitUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1C75741D6362DF00D412FB /* HealthKitUserData.swift */; };
 		2E1DA87D1D5E057500F83DFD /* WalkTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1DA87B1D5E057500F83DFD /* WalkTracker.swift */; };
 		2E1DA87F1D5E0DEB00F83DFD /* ActivityTracker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E1DA87E1D5E0DEB00F83DFD /* ActivityTracker.storyboard */; };
 		2E1DA8831D5E3B5B00F83DFD /* WalkTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1DA8821D5E3B5B00F83DFD /* WalkTrackerViewController.swift */; };
 		2E3A91291D6E339500A4DD85 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3A91281D6E339500A4DD85 /* HealthKit.framework */; };
-		2E7B02845A404C04E0D92E5E /* Pods_Anytrail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 599CF5E42324548824DD0368 /* Pods_Anytrail.framework */; };
+		2E55BD5F1D7772D700360FCA /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E55BD5E1D7772D700360FCA /* Keys.swift */; };
 		2E8AC7851D67C3E80012AE98 /* Paths.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2E8AC7831D67C3E80012AE98 /* Paths.xcdatamodeld */; };
 		2EBCDDFD1D6BA4E900E8B6BC /* DirectionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBCDDFB1D6BA4E900E8B6BC /* DirectionsView.swift */; };
 		2EBCDDFE1D6BA4E900E8B6BC /* DirectionsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EBCDDFC1D6BA4E900E8B6BC /* DirectionsView.xib */; };
@@ -67,6 +66,8 @@
 		949370351D62515900C696AE /* ATConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949370341D62515900C696AE /* ATConstants.swift */; };
 		949C271F1D6F44A600D0B888 /* AnytrailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949C271E1D6F44A600D0B888 /* AnytrailTests.swift */; };
 		94B1ABEB1D5E4AD800D3DA8E /* ATAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B1ABEA1D5E4AD800D3DA8E /* ATAnnotationView.swift */; };
+		C3C572754CE88DCCF94D21A9 /* Pods_WalkmoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDBEF8FC1BEA5EDC6B89A221 /* Pods_WalkmoreTests.framework */; };
+		C6033C775A43D5CCEF2C9F36 /* Pods_Walkmore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5493332F68CE7A9306D2A47F /* Pods_Walkmore.framework */; };
 		C6F13EAEADB81648B00617C6 /* Pods_AnytrailTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C268E151DD10F8DFBAF931E3 /* Pods_AnytrailTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,17 +82,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2E135AB61D73C24A003D230A /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		2E1C75741D6362DF00D412FB /* HealthKitUserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthKitUserData.swift; sourceTree = "<group>"; };
 		2E1DA87B1D5E057500F83DFD /* WalkTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkTracker.swift; sourceTree = "<group>"; };
 		2E1DA87E1D5E0DEB00F83DFD /* ActivityTracker.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ActivityTracker.storyboard; sourceTree = "<group>"; };
 		2E1DA8821D5E3B5B00F83DFD /* WalkTrackerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WalkTrackerViewController.swift; path = Controllers/WalkTrackerViewController.swift; sourceTree = "<group>"; };
 		2E3A91281D6E339500A4DD85 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		2E55BD5E1D7772D700360FCA /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Keys.swift; path = "../../../ios-0616-team-whale/Anytrail/Anytrail/Keys.swift"; sourceTree = "<group>"; };
 		2E8AC7841D67C3E80012AE98 /* Paths.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Paths.xcdatamodel; sourceTree = "<group>"; };
 		2EBCDDFB1D6BA4E900E8B6BC /* DirectionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionsView.swift; sourceTree = "<group>"; };
 		2EBCDDFC1D6BA4E900E8B6BC /* DirectionsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DirectionsView.xib; sourceTree = "<group>"; };
 		2EDDFE291D5A868900B36853 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3417C12B1559CD326FE9F852 /* Pods-Anytrail.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Anytrail.release.xcconfig"; path = "Pods/Target Support Files/Pods-Anytrail/Pods-Anytrail.release.xcconfig"; sourceTree = "<group>"; };
+		3271B3DD624C11A932422FFB /* Pods-Walkmore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Walkmore.release.xcconfig"; path = "Pods/Target Support Files/Pods-Walkmore/Pods-Walkmore.release.xcconfig"; sourceTree = "<group>"; };
 		4D5244711D66084F0066C01B /* TipsAndTricksTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipsAndTricksTableViewCell.swift; sourceTree = "<group>"; };
 		4D5244731D660AE60066C01B /* TipsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TipsCell.xib; sourceTree = "<group>"; };
 		4D5244751D6615000066C01B /* TipsAndTricksHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TipsAndTricksHeader.xib; sourceTree = "<group>"; };
@@ -109,7 +110,7 @@
 		4DFDBC101D6262E2006616D0 /* UserProfileCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserProfileCell.xib; sourceTree = "<group>"; };
 		4DFDBC131D634806006616D0 /* ProfileMapHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileMapHeader.swift; sourceTree = "<group>"; };
 		4DFDBC141D634806006616D0 /* ProfileMapHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileMapHeader.xib; sourceTree = "<group>"; };
-		5661F119B27C682B7C9BCB04 /* Pods-AnytrailTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnytrailTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnytrailTests/Pods-AnytrailTests.release.xcconfig"; sourceTree = "<group>"; };
+		5493332F68CE7A9306D2A47F /* Pods_Walkmore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Walkmore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		599CF5E42324548824DD0368 /* Pods_Anytrail.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Anytrail.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A3948F61D620BC1004A4B94 /* Path.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Path.storyboard; sourceTree = "<group>"; };
 		8A3948F81D621C23004A4B94 /* ATPathViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATPathViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +122,7 @@
 		8A4827961D677B0700C53A71 /* InternetStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternetStatus.swift; sourceTree = "<group>"; };
 		8A66242E1D5A8DCB009760DA /* HealthKitDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthKitDataStore.swift; sourceTree = "<group>"; };
 		8AC2741E1D6505F800F4D4E1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		8EFCF0B04697949FE1C67E4E /* Pods-Walkmore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Walkmore.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Walkmore/Pods-Walkmore.debug.xcconfig"; sourceTree = "<group>"; };
 		9424A76C1D53D5DA00CE8D42 /* Walkmore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Walkmore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9424A76F1D53D5DA00CE8D42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9424A7761D53D5DA00CE8D42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -150,9 +152,10 @@
 		949C271D1D6F44A500D0B888 /* AnytrailTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AnytrailTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		949C271E1D6F44A600D0B888 /* AnytrailTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnytrailTests.swift; sourceTree = "<group>"; };
 		94B1ABEA1D5E4AD800D3DA8E /* ATAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ATAnnotationView.swift; path = UI/ATAnnotationView.swift; sourceTree = "<group>"; };
+		BD45DED364F04F6B1C1E1BB0 /* Pods-WalkmoreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalkmoreTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WalkmoreTests/Pods-WalkmoreTests.release.xcconfig"; sourceTree = "<group>"; };
 		C268E151DD10F8DFBAF931E3 /* Pods_AnytrailTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnytrailTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DAD2C8D70B6029D7314DD479 /* Pods-AnytrailTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnytrailTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnytrailTests/Pods-AnytrailTests.debug.xcconfig"; sourceTree = "<group>"; };
-		F4AC6E6A90B2DC273C8971C2 /* Pods-Anytrail.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Anytrail.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Anytrail/Pods-Anytrail.debug.xcconfig"; sourceTree = "<group>"; };
+		DDBEF8FC1BEA5EDC6B89A221 /* Pods_WalkmoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WalkmoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEDDE3EFF39E8A444F27868B /* Pods-WalkmoreTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalkmoreTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WalkmoreTests/Pods-WalkmoreTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,8 +163,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E7B02845A404C04E0D92E5E /* Pods_Anytrail.framework in Frameworks */,
 				2E3A91291D6E339500A4DD85 /* HealthKit.framework in Frameworks */,
+				C6033C775A43D5CCEF2C9F36 /* Pods_Walkmore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6F13EAEADB81648B00617C6 /* Pods_AnytrailTests.framework in Frameworks */,
+				C3C572754CE88DCCF94D21A9 /* Pods_WalkmoreTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +220,7 @@
 		9424A76E1D53D5DA00CE8D42 /* Anytrail */ = {
 			isa = PBXGroup;
 			children = (
-				2E135AB61D73C24A003D230A /* Keys.swift */,
+				2E55BD5E1D7772D700360FCA /* Keys.swift */,
 				2E8AC7831D67C3E80012AE98 /* Paths.xcdatamodeld */,
 				4DF1FD171D64E3F800692309 /* Anytrail.entitlements */,
 				9424A76F1D53D5DA00CE8D42 /* AppDelegate.swift */,
@@ -335,6 +339,8 @@
 				8AC2741E1D6505F800F4D4E1 /* SystemConfiguration.framework */,
 				599CF5E42324548824DD0368 /* Pods_Anytrail.framework */,
 				C268E151DD10F8DFBAF931E3 /* Pods_AnytrailTests.framework */,
+				5493332F68CE7A9306D2A47F /* Pods_Walkmore.framework */,
+				DDBEF8FC1BEA5EDC6B89A221 /* Pods_WalkmoreTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -342,10 +348,10 @@
 		E51CB3F131D7F2E3E53360EE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F4AC6E6A90B2DC273C8971C2 /* Pods-Anytrail.debug.xcconfig */,
-				3417C12B1559CD326FE9F852 /* Pods-Anytrail.release.xcconfig */,
-				DAD2C8D70B6029D7314DD479 /* Pods-AnytrailTests.debug.xcconfig */,
-				5661F119B27C682B7C9BCB04 /* Pods-AnytrailTests.release.xcconfig */,
+				8EFCF0B04697949FE1C67E4E /* Pods-Walkmore.debug.xcconfig */,
+				3271B3DD624C11A932422FFB /* Pods-Walkmore.release.xcconfig */,
+				EEDDE3EFF39E8A444F27868B /* Pods-WalkmoreTests.debug.xcconfig */,
+				BD45DED364F04F6B1C1E1BB0 /* Pods-WalkmoreTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -492,7 +498,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AnytrailTests/Pods-AnytrailTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WalkmoreTests/Pods-WalkmoreTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4DEC2CD0B03C11E59203DB92 /* [CP] Copy Pods Resources */ = {
@@ -507,7 +513,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Anytrail/Pods-Anytrail-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Walkmore/Pods-Walkmore-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		519782D0E52AB9478379D543 /* [CP] Check Pods Manifest.lock */ = {
@@ -552,7 +558,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AnytrailTests/Pods-AnytrailTests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WalkmoreTests/Pods-WalkmoreTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FE01C712D6BEFFE09883933B /* [CP] Embed Pods Frameworks */ = {
@@ -567,7 +573,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Anytrail/Pods-Anytrail-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Walkmore/Pods-Walkmore-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -602,6 +608,7 @@
 				945F35E21D58F390002F9C1E /* ATLoginViewController.swift in Sources */,
 				949370351D62515900C696AE /* ATConstants.swift in Sources */,
 				8A3948F91D621C23004A4B94 /* ATPathViewController.swift in Sources */,
+				2E55BD5F1D7772D700360FCA /* Keys.swift in Sources */,
 				4DF1FD1F1D6508C500692309 /* TipsAndTricksViewController.swift in Sources */,
 				947B6AB51D6B6F01009D5268 /* Coordinate.swift in Sources */,
 				4DFDBC151D634806006616D0 /* ProfileMapHeader.swift in Sources */,
@@ -612,7 +619,6 @@
 				4DB2D9651D58DF18007BD4A5 /* FoursquareData.swift in Sources */,
 				947B6AB31D6B6F01009D5268 /* FullPath.swift in Sources */,
 				8A6624311D5A8DCB009760DA /* HealthKitDataStore.swift in Sources */,
-				2E135AB71D73C24A003D230A /* Keys.swift in Sources */,
 				2E1DA8831D5E3B5B00F83DFD /* WalkTrackerViewController.swift in Sources */,
 				4DB2D9611D58DEBA007BD4A5 /* FoursquareAPIClient.swift in Sources */,
 				8A3948FB1D623743004A4B94 /* ATPathCell.swift in Sources */,
@@ -749,7 +755,7 @@
 		};
 		9424A78C1D53D5DA00CE8D42 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F4AC6E6A90B2DC273C8971C2 /* Pods-Anytrail.debug.xcconfig */;
+			baseConfigurationReference = 8EFCF0B04697949FE1C67E4E /* Pods-Walkmore.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Anytrail/Anytrail.entitlements;
@@ -765,7 +771,7 @@
 		};
 		9424A78D1D53D5DA00CE8D42 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3417C12B1559CD326FE9F852 /* Pods-Anytrail.release.xcconfig */;
+			baseConfigurationReference = 3271B3DD624C11A932422FFB /* Pods-Walkmore.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Anytrail/Anytrail.entitlements;
@@ -781,7 +787,7 @@
 		};
 		9424A78F1D53D5DA00CE8D42 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DAD2C8D70B6029D7314DD479 /* Pods-AnytrailTests.debug.xcconfig */;
+			baseConfigurationReference = EEDDE3EFF39E8A444F27868B /* Pods-WalkmoreTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
@@ -799,7 +805,7 @@
 		};
 		9424A7901D53D5DA00CE8D42 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5661F119B27C682B7C9BCB04 /* Pods-AnytrailTests.release.xcconfig */;
+			baseConfigurationReference = BD45DED364F04F6B1C1E1BB0 /* Pods-WalkmoreTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;

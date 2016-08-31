@@ -11,7 +11,7 @@
         <!--Delegate-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="ATMapViewController" customModule="Anytrail" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="ATMapViewController" customModule="Walkmore" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
@@ -90,7 +90,7 @@
         <!--Splash View Controller-->
         <scene sceneID="Fo3-kk-ZSx">
             <objects>
-                <viewController id="ULm-CJ-UIQ" customClass="ATSplashViewController" customModule="Anytrail" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ULm-CJ-UIQ" customClass="ATSplashViewController" customModule="Walkmore" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dy9-Lw-E7j"/>
                         <viewControllerLayoutGuide type="bottom" id="uqZ-XW-tWT"/>
@@ -254,7 +254,6 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <segue destination="SLJ-wA-XTi" kind="relationship" relationship="viewControllers" id="U9F-7r-ASZ"/>
                         <segue destination="0BR-xv-hSF" kind="relationship" relationship="viewControllers" id="YFc-95-Ali"/>
                         <segue destination="RfK-PL-zJ9" kind="relationship" relationship="viewControllers" id="liU-Tt-fmv"/>
                     </connections>
@@ -266,7 +265,7 @@
         <!--Signup View Controller-->
         <scene sceneID="FWX-hz-tOu">
             <objects>
-                <viewController id="lW9-gP-eUF" customClass="ATSignupViewController" customModule="Anytrail" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="lW9-gP-eUF" customClass="ATSignupViewController" customModule="Walkmore" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LOe-3Q-NoA"/>
                         <viewControllerLayoutGuide type="bottom" id="egZ-UM-rfw"/>
@@ -307,7 +306,7 @@
                                     </constraints>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="CellId" rowHeight="55" id="0w2-L4-guP" customClass="ATInputCell" customModule="Anytrail" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="CellId" rowHeight="55" id="0w2-L4-guP" customClass="ATInputCell" customModule="Walkmore" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="189.5" width="600" height="55"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0w2-L4-guP" id="oUD-0e-Wj2">
@@ -418,20 +417,10 @@
             </objects>
             <point key="canvasLocation" x="-38" y="396"/>
         </scene>
-        <!--Path-->
-        <scene sceneID="taO-lx-HkU">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Path" id="SLJ-wA-XTi" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Paths" image="tab-paths" selectedImage="tab-paths" id="S6o-22-TVy"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Nuo-9I-emT" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="113" y="396"/>
-        </scene>
         <!--Login-->
         <scene sceneID="MPv-XY-gjV">
             <objects>
-                <viewController id="NCQ-ti-99c" customClass="ATLoginViewController" customModule="Anytrail" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="NCQ-ti-99c" customClass="ATLoginViewController" customModule="Walkmore" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="x5A-FU-ThQ"/>
                         <viewControllerLayoutGuide type="bottom" id="qnN-vR-E3T"/>
@@ -472,7 +461,7 @@
                                     </constraints>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="CellId" rowHeight="55" id="2KG-cT-csr" customClass="ATInputCell" customModule="Anytrail" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="CellId" rowHeight="55" id="2KG-cT-csr" customClass="ATInputCell" customModule="Walkmore" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="189.5" width="600" height="55"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2KG-cT-csr" id="Cuu-eb-YhS">
@@ -571,7 +560,6 @@
         <image name="map" width="213" height="378"/>
         <image name="person" width="22" height="18"/>
         <image name="tab-map" width="25" height="25"/>
-        <image name="tab-paths" width="25" height="25"/>
         <image name="tab-profile" width="25" height="25"/>
     </resources>
 </document>

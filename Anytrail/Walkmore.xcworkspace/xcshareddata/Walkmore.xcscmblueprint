@@ -1,0 +1,28 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "F980FC3913E592CE8ED4CBE0687C21439C2F3CC9",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "F980FC3913E592CE8ED4CBE0687C21439C2F3CC9" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "FB8A4233-74D7-43C1-B0D4-1EAD1F03D45E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "F980FC3913E592CE8ED4CBE0687C21439C2F3CC9" : "ios-0616-team-whale\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Walkmore",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Anytrail\/Walkmore.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:Cordavi\/Walkmore.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F980FC3913E592CE8ED4CBE0687C21439C2F3CC9"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/learn-co-students\/ios-0616-team-whale.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F980FC3913E592CE8ED4CBE0687C21439C2F3CC9"
+    }
+  ]
+}

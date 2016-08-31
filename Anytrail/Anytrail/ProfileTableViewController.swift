@@ -46,7 +46,7 @@ class ProfileTableViewController: UIViewController, UITableViewDelegate, UITable
                     if let image = image {
                         header.profileImageView?.image = image
                     } else {
-                        // Remain empty state
+                        header.profileImageView?.image = UIImage(named: "mike")
                     }
                 })
                 
@@ -104,7 +104,7 @@ class ProfileTableViewController: UIViewController, UITableViewDelegate, UITable
             cell.giveCellData(flightsIcon, dataLabel: "\(singleHealth.0) flights climbed")
             return cell
         case "distance":
-            cell.giveCellData(distanceIcon, dataLabel: "\(singleHealth.0) miles travelled")
+            cell.giveCellData(distanceIcon, dataLabel: "\(singleHealth.0) miles traveled")
             return cell
         case "energy-burn":
             cell.giveCellData(energyIcon, dataLabel: "\(singleHealth.0) active calories")

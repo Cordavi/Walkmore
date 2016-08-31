@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (3.4.1)
+  - Alamofire (3.4.2)
   - Bolts (1.8.4):
     - Bolts/AppLinks (= 1.8.4)
     - Bolts/Tasks (= 1.8.4)
@@ -50,9 +50,7 @@ PODS:
     - Polyline (~> 3.2)
   - MapboxGeocoder.swift (0.5.0)
   - MapboxStatic.swift (0.6.0)
-  - Nimble (4.1.0)
   - Polyline (3.2.2)
-  - Quick (0.9.3)
   - ReachabilitySwift (2.3.3)
   - SnapKit (0.30.0.beta2)
   - SwiftyJSON (2.3.2)
@@ -68,8 +66,6 @@ DEPENDENCIES:
   - MapboxDirections.swift (from `https://github.com/mapbox/MapboxDirections.swift.git`, tag `v0.6.0`)
   - MapboxGeocoder.swift (from `https://github.com/mapbox/MapboxGeocoder.swift.git`, tag `v0.5.0`)
   - MapboxStatic.swift (from `https://github.com/mapbox/MapboxStatic.swift.git`, tag `v0.6.0`)
-  - Nimble
-  - Quick
   - ReachabilitySwift
   - SnapKit (= 0.30.0.beta2)
   - SwiftyJSON
@@ -98,7 +94,7 @@ CHECKOUT OPTIONS:
     :tag: v0.6.0
 
 SPEC CHECKSUMS:
-  Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
+  Alamofire: 6aa33201d20d069e1598891cf928883ff1888c7a
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
   FBSDKCoreKit: 6680cbd33a4243d80700f182d0af36b3fa7f3118
   FBSDKLoginKit: 96d9b70b5784490f02ab86119e542a1f182017a8
@@ -116,14 +112,12 @@ SPEC CHECKSUMS:
   MapboxDirections.swift: 144cefb4386d419f916ce27928834c28bbaafb4f
   MapboxGeocoder.swift: 4fbe12e42458db895ff73739c69743c943d0824e
   MapboxStatic.swift: 3185804edec6bea74be7d74fb3ca9a666009f7a2
-  Nimble: 97a0a4cae5124c117115634b2d055d8c97d0af19
   Polyline: 4968bf16ceddd579e1e60820edc74a2271ec9c59
-  Quick: 13a2a2b19a5d8e3ed4fd0c36ee46597fd77ebf71
   ReachabilitySwift: e0f6b6f280effb47731acfaaa2d5ffe223703793
   SnapKit: c4bb32b1d3c5d18ff63bf95ffcbc599d2bab964c
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
   TGLParallaxCarousel: 7736edf9e26a3f08f32d0a24fcb0c93edc8253ad
 
-PODFILE CHECKSUM: 0222fe63c9fe396c72ee9d31e6bc8f1ff179959d
+PODFILE CHECKSUM: 8e10b31404dbcbd7767d25b3e4ac00600e7e777b
 
 COCOAPODS: 1.0.1
